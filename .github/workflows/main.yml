@@ -15,14 +15,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Check perms
-        run: sudo -l
-
-      - name: Check envsubst
-        run: which envsubst
-
-      - name: Commads
+      - name: Pre-requisites
         run: |
-          hostnamectl
-          pwd
-          ls -lhatr
+          which envsubst
+          which aws
+
+      - name: Build website
+        run: bash pugo.sh
+
+      - name: Check HTML
+        run: file template/resume.html
