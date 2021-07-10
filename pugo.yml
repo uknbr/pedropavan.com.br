@@ -1,0 +1,48 @@
+about:
+  name: Pedro Pavan
+  age: 30
+  photo: pedro.jpg
+  description: I am passionate about new technologies, willing to learn new topics, and of course, always open to discussions for better solutions. Automation is one of the things that makes me happy and motivated.
+education:
+  -  { year: 2009, title: "BSc Degree in Computer Systems Analysis & Development", description: "Instituto Federal de Educação, Ciência e Tecnologia de São Paulo - IFSP" }
+  -  { year: 2012, title: "LPIC-1", description: "Linux Professional Institute Certified, Level 1" }
+  -  { year: 2013, title: "Post-graduation - Specialization", description: "IT Infrastructure Management in Cloud - UFSCar" }
+  -  { year: 2019, title: "Red Hat Course - Delivery Specialist", description: "Container Platform Application Deployment (OpenShift 3.11)" }
+  -  { year: 2019, title: "Red Hat Course - Delivery Specialist", description: "Automation 1 - Ansible" }
+  -  { year: 2020, title: "Red Hat OpenShift Administration II", description: "Operating a Production Kubernetes Cluster (OpenShift 4.3)" }
+experience:
+  -  { where: "Amdocs", year: 2013, profession: "Technology Integration Specialist", description: "As <u>senior</u> analyst working on Telecom industry, providing technical infrastructure support to application and testing teams. Acting strongly on automating installation and configuration processes for tools and environments through DevOps methodology. Currently mentoring newcomers and leading activities." }
+  -  { where: "Hewlett Packard", year: 2013, profession: ".NET Developer", description: "As <u>junior</u> analyst working on banking & financial software development." }
+  -  { where: "Embrapa", year: 2011, profession: "Programmer", description: "As <u>intern</u> working on agriculture software and application development solutions." }
+  -  { where: "ASR Labs", year: 2010, profession: "Embedded Systems/ARM Microprocessors", description: "As <u>intern</u> working with speech recognition tools for Linux." }
+contact:
+  -  { icon: "fa-envelope", title: "mailto", value: "pedro.pavan@linuxmail.org" }
+  -  { icon: "fa-envelope", title: "mailto", value: "pabreupavan@gmail.com" }
+  -  { icon: "fa-github", title: "Github", value: "https://github.com/uknbr" }
+  -  { icon: "fa-skype", title: "Skype", value: "pabreupavan" }
+skill:
+  -  {title: "Scripting", percent: 0.90}
+  -  {title: "Docker", percent: 0.70}
+  -  {title: "OpenShift Container Platform", percent: 0.60}
+  -  {title: "Kubernetes", percent: 0.55}
+  -  {title: "Python", percent: 0.35}
+  -  {title: "Golang", percent: 0.15}
+  -  {title: "AWS", percent: 0.50}
+  -  {title: "Azure", percent: 0.15}
+  -  {title: "Terraform", percent: 0.20}
+  -  {title: "Ansible", percent: 0.60}
+  -  {title: "Linux", percent: 0.75}
+  -  {title: "Jenkins", percent: 0.40}
+language:
+  -  {name: "Portuguese", percent: 100}
+  -  {name: "English", percent: 90}
+  -  {name: "Spanish", percent: 30}
+hobbie:
+  - "Cars"
+  - "Airsoft"
+  - "Raspberry Pi"
+  - "Video Games"
+  - "Football"
+  - "Programming"
+  - "Mechanics"
+  - "Watching YouTube"

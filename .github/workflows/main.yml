@@ -1,0 +1,28 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Check perms
+        run: sudo -l
+
+      - name: Check envsubst
+        run: which envsubst
+
+      - name: Commads
+        run: |
+          hostnamectl
+          pwd
+          ls -lhatr
