@@ -125,7 +125,17 @@
                 <div class="profession">${experience_4_profession}</div>
                 <div class="description">${experience_4_description}</div>
               </div>
-            </div>                                    
+            </div>
+            <div class="job clearfix">
+              <div class="col-xs-3">
+                <div class="where">${experience_5_where}</div>
+                <div class="year">${experience_5_year}</div>
+              </div>
+              <div class="col-xs-9">
+                <div class="profession">${experience_5_profession}</div>
+                <div class="description">${experience_5_description}</div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="col-xs-12 col-sm-5">
@@ -148,7 +158,7 @@
             <div class="contact-item">
               <div class="icon pull-left text-center"><span class="fa ${contact_4_icon} fa-fw"></span></div>
               <div class="title pull-right">${contact_4_title}</div>
-              <div class="description pull-right"><p>${contact_4_value}</p></div>
+              <div class="description pull-right"><a href="${contact_4_value}" target="_blank">${contact_4_value}
             </div>
           </div>
           <!-- SKILLS -->
@@ -166,7 +176,6 @@
               <div class="item-skills" data-percent="${skill_9_percent}">${skill_9_title}</div>
               <div class="item-skills" data-percent="${skill_10_percent}">${skill_10_title}</div>
               <div class="item-skills" data-percent="${skill_11_percent}">${skill_11_title}</div>
-              <div class="item-skills" data-percent="${skill_12_percent}">${skill_12_title}</div>
               <div class="skills-legend clearfix">
                 <div class="legend-left legend">Beginner</div>
                 <div class="legend-left legend"><span>Proficient</span></div>
