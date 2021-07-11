@@ -1,5 +1,6 @@
 ### About
-Inspired by the best framework for building websites - Pugo = Pedro + Hugo
+Inspired by the best framework for building websites\
+This is **Pugo** (Pedro + Hugo)
 
 ### TODO
 1. Generate dynamic list

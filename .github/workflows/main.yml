@@ -28,7 +28,7 @@ jobs:
 
       - name: S3 sync
         run: |
-          aws s3 ls s3://${{ secrets.S3_BUCKET }}/ --summarize
+          aws s3 ls s3://${{ secrets.S3_BUCKET }}/ --human-readable --summarize
           aws s3 rm s3://${{ secrets.S3_BUCKET }} --recursive
           aws s3 sync template/ s3://${{ secrets.S3_BUCKET }}/
         env:
