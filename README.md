@@ -9,11 +9,11 @@ Inspired by the best framework for building websites\
 This is **Pugo** (Pedro + Hugo)
 
 ### TODO
-1. Generate dynamic list
-2. Move to Golang or Create Hugo theme
-3. Birthday date
-4. Upgrade fontawesome
-5. Terraform or Pulumi
+- [x] Generate dynamic list
+- [ ] Move to Golang or Create Hugo theme
+- [ ] Birthday date
+- [ ] Upgrade fontawesome
+- [ ] Terraform or Pulumi
 
 ### Deployment on AWS
 - S3

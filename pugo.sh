@@ -1,48 +1,34 @@
 #!/usr/bin/env bash
 BASEDIR=$(dirname "${BASH_SOURCE}")
+source ${BASEDIR}/lib.sh
 
-#https://github.com/mrbaseman/parse_yaml
-function parse_yaml {
-   local prefix=$2
-   local s='[[:space:]]*' w='[a-zA-Z0-9_]*' fs=$(echo @|tr @ '\034')
-   sed -ne "s|,$s\]$s\$|]|" \
-        -e ":1;s|^\($s\)\($w\)$s:$s\[$s\(.*\)$s,$s\(.*\)$s\]|\1\2: [\3]\n\1  - \4|;t1" \
-        -e "s|^\($s\)\($w\)$s:$s\[$s\(.*\)$s\]|\1\2:\n\1  - \3|;p" $1 | \
-   sed -ne "s|,$s}$s\$|}|" \
-        -e ":1;s|^\($s\)-$s{$s\(.*\)$s,$s\($w\)$s:$s\(.*\)$s}|\1- {\2}\n\1  \3: \4|;t1" \
-        -e    "s|^\($s\)-$s{$s\(.*\)$s}|\1-\n\1  \2|;p" | \
-   sed -ne "s|^\($s\):|\1|" \
-        -e "s|^\($s\)-$s[\"']\(.*\)[\"']$s\$|\1$fs$fs\2|p" \
-        -e "s|^\($s\)-$s\(.*\)$s\$|\1$fs$fs\2|p" \
-        -e "s|^\($s\)\($w\)$s:$s[\"']\(.*\)[\"']$s\$|\1$fs\2$fs\3|p" \
-        -e "s|^\($s\)\($w\)$s:$s\(.*\)$s\$|\1$fs\2$fs\3|p" | \
-   awk -F$fs '{
-      indent = length($1)/2;
-      vname[indent] = $2;
-      for (i in vname) {if (i > indent) {delete vname[i]; idx[i]=0}}
-      if(length($2)== 0){  vname[indent]= ++idx[indent] };
-      if (length($3) > 0) {
-         vn=""; for (i=0; i<indent; i++) { vn=(vn)(vname[i])("_")}
-         printf("export %s%s%s=\"%s\"\n", "'$prefix'",vn, vname[indent], $3);
-      }
-   }'
-}
+_vars=$(mktemp)
+parse_yaml ${resume_yaml} > ${_vars}
+source ${_vars}
 
-var=$(parse_yaml pugo.yml)
-items=$(echo "${var}" | grep -c 'export ')
-echo "Items: ${items}"
+template_init
+template_about
+template_education ${_vars}
+template_experience ${_vars}
+template_contact ${_vars}
+template_skill ${_vars}
+template_language ${_vars}
+template_hobbie ${_vars}
 
-cat <<EOF > template/status.json
-{
-   "status": {
-      "items": "${items}",
-      "update": "$(date)"
-   }
-}
-EOF
-
-source <(echo "${var}")
-for _filename in $(find ${BASEDIR}/ -type f -iname '*.template') ; do
+for _filename in $(find ${BASEDIR}/ -type f -iname '*.tmpl') ; do
+   _target=$(echo "${BASEDIR}/${_filename%.*}")
    echo "Generating ${_filename}"
-   /usr/bin/envsubst < ${_filename} > $(echo "${_filename%.*}")
+   /usr/bin/envsubst < ${_filename} > ${_target}
+   cat ${_target} >> ${resume_html}
 done
+
+items=$(cat ${_vars} | wc -l)
+echo "{
+   \"status\": {
+      \"items\": \"${items}\",
+      \"update\": \"$(date)\"
+   }
+}" | tee ${BASEDIR}/template/status.json
+
+rm -f ${_vars}
+exit 0
