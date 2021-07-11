@@ -30,6 +30,7 @@ jobs:
         run: |
           aws s3 ls s3://${{ secrets.S3_BUCKET }}/ --human-readable --summarize
           aws s3 rm s3://${{ secrets.S3_BUCKET }} --recursive
+          rm -f template/resume.html.template
           aws s3 sync template/ s3://${{ secrets.S3_BUCKET }}/
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
