@@ -29,8 +29,17 @@ function parse_yaml {
 }
 
 var=$(parse_yaml pugo.yml)
-echo -n "Tokens: "
-echo "${var}" | grep -c 'export '
+items=$(echo "${var}" | grep -c 'export ')
+echo "Items: ${items}"
+
+cat <<EOF > template/status.json
+{
+   "status": {
+      "items": "${items}",
+      "update": "$(date)"
+   }
+}
+EOF
 
 source <(echo "${var}")
 for _filename in $(find ${BASEDIR}/ -type f -iname '*.template') ; do
