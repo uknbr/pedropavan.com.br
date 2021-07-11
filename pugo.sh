@@ -15,7 +15,7 @@ template_skill ${_vars}
 template_language ${_vars}
 template_hobbie ${_vars}
 
-for _filename in $(find ${BASEDIR}/ -type f -iname '*.tmpl') ; do
+for _filename in $(find ${BASEDIR}/ -type f -iname '*.tmpl' | sort) ; do
    _target=$(echo "${BASEDIR}/${_filename%.*}")
    echo "Generating ${_filename}"
    /usr/bin/envsubst < ${_filename} > ${_target}
