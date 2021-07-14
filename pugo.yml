@@ -30,7 +30,7 @@ skill:
   -  {title: "Golang", percent: 0.15}
   -  {title: "AWS", percent: 0.50}
   -  {title: "Azure", percent: 0.15}
-  -  {title: "Terraform", percent: 0.20}
+  -  {title: "Terraform", percent: 0.25}
   -  {title: "Ansible", percent: 0.60}
   -  {title: "Linux", percent: 0.75}
 language:
