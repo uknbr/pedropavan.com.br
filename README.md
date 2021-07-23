@@ -1,6 +1,5 @@
 [![uknbr - pedropavan.com.br](https://img.shields.io/static/v1?label=uknbr&message=pedropavan.com.br&color=blue&logo=github)](https://github.com/uknbr/pedropavan.com.br)
-[![stars - pedropavan.com.br](https://img.shields.io/github/stars/uknbr/pedropavan.com.br?style=social)](https://github.com/uknbr/pedropavan.com.br)
-
+![Website](https://img.shields.io/website?down_message=DOWN&up_message=UP&url=https%3A%2F%2Fpedropavan.com.br)
 [![main](https://github.com/uknbr/pedropavan.com.br/actions/workflows/main.yml/badge.svg)](https://github.com/uknbr/pedropavan.com.br/actions?query=main)
 [![License](https://img.shields.io/badge/License-MIT-blue)](#license)
 
