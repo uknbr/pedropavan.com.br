@@ -19,6 +19,7 @@ experience:
 contact:
   -  { icon: "fa-envelope", title: "mailto", value: "pedro.pavan@linuxmail.org" }
   -  { icon: "fa-envelope", title: "mailto", value: "pabreupavan@gmail.com" }
+  -  { icon: "fa-comments", title: "Telegram", value: "https://t.me/pabreupavan" }
   -  { icon: "fa-github", title: "Github", value: "https://github.com/uknbr" }
   -  { icon: "fa-globe", title: "Website", value: "https://ukn.com.br" }
 skill:
