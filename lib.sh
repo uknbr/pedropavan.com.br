@@ -21,6 +21,7 @@ function template_about() {
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>\${about_name}</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link href="bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome.css" rel="stylesheet">
     <link href="main.css" rel="stylesheet">
