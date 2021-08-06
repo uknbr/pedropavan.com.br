@@ -34,6 +34,8 @@ skill:
   -  {title: "Terraform", percent: 0.25}
   -  {title: "Ansible", percent: 0.60}
   -  {title: "Linux", percent: 0.75}
+  -  {title: "Jenkins", percent: 0.55}
+  -  {title: "Git", percent: 0.50}
 language:
   -  {name: "Portuguese", percent: 100}
   -  {name: "English", percent: 90}
