@@ -31,7 +31,7 @@ skill:
   -  {title: "OpenShift Container Platform", percent: 0.60}
   -  {title: "Kubernetes", percent: 0.55}
   -  {title: "Python", percent: 0.35}
-  -  {title: "Golang", percent: 0.15}
+  -  {title: "Golang", percent: 0.20}
   -  {title: "AWS", percent: 0.60}
   -  {title: "Azure", percent: 0.15}
   -  {title: "Terraform", percent: 0.25}
