@@ -21,7 +21,7 @@ function template_about() {
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>\${about_name}</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="files/favicon.ico" />
     <link href="bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome.css" rel="stylesheet">
     <link href="main.css" rel="stylesheet">
@@ -37,7 +37,7 @@ function template_about() {
           <div id="photo-header" class="text-center">
             <!-- PHOTO (AVATAR) -->
             <div id="photo">
-              <img src="\${about_photo}" alt="My photo">
+              <img src="files/\${about_photo}" alt="My photo">
             </div>
             <div id="text-header">
               <h1>Hello,<br> my name is <span>\${about_name}</span><sup>\${about_age}yo</sup> and this is my page</h1>
@@ -89,9 +89,43 @@ EOF
 EOF
 }
 
+function template_course() {
+  local _file=$1
+  local _template="${BASEDIR}/${resume_tmpl}/3_resume_course.html.tmpl"
+  local _max=$(grep 'course_' ${_file} | grep -c '_title')
+  
+  # Begin
+  cat <<EOF > ${_template}
+          <!-- COURSE -->
+          <div class="box">
+            <h2>Courses and Certifications</h2>
+            <ul id="education" class="clearfix">
+EOF
+
+  # Data
+  for i in $(seq ${_max})
+  do
+    cat <<EOF >> ${_template}
+              <li>
+                <div class="year pull-left">\${course_${i}_year}</div>
+                <div class="description pull-right">
+                  <h3>\${course_${i}_title}</h3>
+                  <p>\${course_${i}_description} <a href="files/\${course_${i}_file}" target="_blank">[check]</a></p>
+                </div>
+              </li>
+EOF
+  done
+
+  # End
+  cat <<EOF >> ${_template}
+            </ul>
+          </div>
+EOF
+}
+
 function template_experience() {
 	local _file=$1
-	local _template="${BASEDIR}/${resume_tmpl}/3_resume_experience.html.tmpl"
+	local _template="${BASEDIR}/${resume_tmpl}/4_resume_experience.html.tmpl"
 	local _max=$(grep 'experience_' ${_file} | grep -c '_where')
 
 	# Begin
@@ -128,7 +162,7 @@ EOF
 
 function template_contact() {
 	local _file=$1
-	local _template="${BASEDIR}/${resume_tmpl}/4_resume_contact.html.tmpl"
+	local _template="${BASEDIR}/${resume_tmpl}/5_resume_contact.html.tmpl"
 	local _max=$(grep 'contact_' ${_file} | grep -c '_title')
 
 	# Begin
@@ -169,7 +203,7 @@ EOF
 
 function template_skill() {
 	local _file=$1
-	local _template="${BASEDIR}/${resume_tmpl}/5_resume_skill.html.tmpl"
+	local _template="${BASEDIR}/${resume_tmpl}/6_resume_skill.html.tmpl"
 	local _max=$(grep 'skill_' ${_file} | grep -c '_title')
 
 	# Begin
@@ -203,7 +237,7 @@ EOF
 
 function template_language() {
 	local _file=$1
-	local _template="${BASEDIR}/${resume_tmpl}/6_resume_language.html.tmpl"
+	local _template="${BASEDIR}/${resume_tmpl}/7_resume_language.html.tmpl"
 	local _max=$(grep 'language_' ${_file} | grep -c '_name')
 
 	# Begin
@@ -231,7 +265,7 @@ EOF
 
 function template_hobbie() {
 	local _file=$1
-	local _template="${BASEDIR}/${resume_tmpl}/7_resume_hobbie.html.tmpl"
+	local _template="${BASEDIR}/${resume_tmpl}/8_resume_hobbie.html.tmpl"
 	local _max=$(grep -c 'hobbie_' ${_file})
 
 	# Begin

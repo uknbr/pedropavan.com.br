@@ -9,6 +9,7 @@ source ${_vars}
 template_init
 template_about
 template_education ${_vars}
+template_course ${_vars}
 template_experience ${_vars}
 template_contact ${_vars}
 template_skill ${_vars}
