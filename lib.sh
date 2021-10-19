@@ -123,6 +123,54 @@ EOF
 EOF
 }
 
+function template_course_NEW() {
+  set -x
+  local _file=$1
+  local _template="${BASEDIR}/${resume_tmpl}/3_resume_course.html.tmpl"
+  local _items=$(grep 'test_' ${_file} | cut -d '_' -f 2 | uniq | tr '\n' ' ')
+  local _max=$(echo ${_items} | tr ' ' '\n' | wc -l)
+  
+  # Begin
+  cat <<EOF > ${_template}
+          <!-- COURSE -->
+          <div class="box">
+            <h2>Courses and Certifications</h2>
+            <ul id="education" class="clearfix">
+EOF
+
+  # Data
+  for i in $(seq ${_max})
+  do
+    cat <<EOF >> ${_template}
+              <li>
+                <div class="description pull-right">
+EOF
+    # Sub-items
+    count=0
+    for j in ${_items}
+    do
+      count=$((count + 1))
+      if [ ${count} -eq 1 ] ; then
+        echo "                  <h3>\${test_${j}_${count}_topic}</h3>" >> ${_template}
+      fi        
+      cat <<EOF >> ${_template}
+                  <p>⦿ <b>\${test_${j}_${count}_year}</b> ⁃ \${test_${j}_${count}_title} <a href="files/\${test_${j}_${count}_file}" target="_blank">[check]</a></p>
+EOF
+    done
+    cat <<EOF >> ${_template}
+                </div>
+              </li>
+EOF
+  done
+
+  # End
+  cat <<EOF >> ${_template}
+            </ul>
+          </div>
+EOF
+    set +x
+}
+
 function template_experience() {
 	local _file=$1
 	local _template="${BASEDIR}/${resume_tmpl}/4_resume_experience.html.tmpl"

@@ -6,6 +6,20 @@ about:
 education:
   -  { year: 2009, title: "BSc Degree in Computer Systems Analysis & Development", description: "Instituto Federal de Educação, Ciência e Tecnologia de São Paulo - IFSP" }
   -  { year: 2013, title: "Post-graduation - Specialization", description: "IT Infrastructure Management in Cloud - UFSCar" }
+test:
+  linux:
+    -  { topic: "Linux", year: 2012, title: "LPIC-1", description: "Linux Professional Institute Certified, Level 1", file: "lpic-1.pdf" }
+    -  { topic: "Linux", year: 2013, title: "SUSE Linux Enterprise Server", description: "SUSE Certified Linux Professional", file: "ansible.pdf" }
+    -  { topic: "Linux", year: 2020, title: "RHEL", description: "Red Hat Enterprise 8", file: "ansible.pdf" }
+  redhat:
+    -  { topic: "Red Hat", year: 2019, title: "Red Hat OpenShift Administration I", description: "Operating a Kubernetes Cluster (OpenShift 3.11)", file: "openshift_311.pdf" }
+    -  { topic: "Red Hat", year: 2020, title: "Red Hat OpenShift Administration I", description: "Operating a Kubernetes Cluster (OpenShift 4.3)", file: "openshift_42.pdf" }
+    -  { topic: "Red Hat", year: 2020, title: "Red Hat OpenShift Administration I", description: "Operating a Kubernetes Cluster (OpenShift 4.3)", file: "openshift_42.pdf" }    
+  container:
+    -  { topic: "Container", year: 2021, title: "Containers", description: "LinuxTips - Uncomplicating Docker", file: "docker.pdf" }
+    -  { topic: "Container", year: 2021, title: "Docker", description: "LinuxTips - Uncomplicating Docker", file: "docker.pdf" }
+  cloud:  
+    -  { topic: "Cloud", year: 2021, title: "CLF-C01", description: "AWS Certified Cloud Practitioner", file: "clf-c01.pdf" }
 course:
   -  { year: 2012, title: "LPIC-1", description: "Linux Professional Institute Certified, Level 1", file: "lpic-1.pdf" }
   -  { year: 2019, title: "Red Hat Course - Delivery Specialist", description: "Automation 1 - Ansible", file: "ansible.pdf" }
