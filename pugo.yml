@@ -13,7 +13,7 @@ course:
   -  { year: 2021, title: "Docker", description: "LinuxTips - Uncomplicating Docker", file: "docker.pdf" }
   -  { year: 2021, title: "CLF-C01", description: "AWS Certified Cloud Practitioner", file: "clf-c01.pdf" }  
 experience:
-  -  { where: "Amdocs", year: 2013, profession: "Technology Integration Specialist", description: "As <u>senior</u> analyst working on Telecom industry, providing technical infrastructure support to application and testing teams. Acting strongly on automating installation and configuration processes for tools and environments through DevOps methodology. Currently mentoring newcomers and leading activities." }
+  -  { where: "Amdocs", year: 2013, profession: "DevOps Specialist", description: "As <u>senior</u> analyst working on Telecom industry, providing technical infrastructure support to application and testing teams. Acting strongly on automating installation and configuration processes for tools and environments through DevOps methodology. Currently mentoring newcomers and leading activities." }
   -  { where: "Hewlett Packard", year: 2013, profession: ".NET Developer", description: "As <u>junior</u> analyst working on banking & financial software development." }
   -  { where: "Enalta", year: 2012, profession: "Developer", description: "As <u>junior</u> backend developer using Scrum agile methodology." }
   -  { where: "Embrapa", year: 2011, profession: "Programmer", description: "As <u>intern</u> working on agriculture software and application development solutions." }
