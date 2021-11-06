@@ -1,6 +1,6 @@
 about:
   name: Pedro Pavan
-  age: 30
+  age: 31
   photo: pedro.jpg
   description: I am passionate about new technologies, willing to learn new topics, and of course, always open to discussions for better solutions. Automation is one of the things that makes me happy and motivated.
 education:
@@ -27,10 +27,10 @@ contact:
   -  { icon: "fa-globe", title: "Website", value: "https://ukn.com.br" }
 skill:
   -  {title: "Scripting", percent: 0.90}
-  -  {title: "Docker", percent: 0.70}
+  -  {title: "Docker", percent: 0.75}
   -  {title: "OpenShift Container Platform", percent: 0.60}
-  -  {title: "Kubernetes", percent: 0.55}
-  -  {title: "Python", percent: 0.35}
+  -  {title: "Kubernetes", percent: 0.60}
+  -  {title: "Python", percent: 0.40}
   -  {title: "Golang", percent: 0.20}
   -  {title: "AWS", percent: 0.60}
   -  {title: "Azure", percent: 0.15}
